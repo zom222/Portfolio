@@ -1,0 +1,227 @@
+/* --- CSS RESET & BASE STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #481414;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 60px 10%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4A90E2;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #357ABD;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+/* --- NAVBAR --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #33b1c2;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4b28cb;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4A90E2;
+}
+
+/* --- HOME / HERO SECTION --- */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    gap: 40px;
+    background-color: #86c5bf;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- ABOUT SECTION --- */
+#about {
+    background-color: #f0f4f8;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* --- PRODUCTS SECTION --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 1.2rem;
+    color: #4A90E2;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* --- TESTIMONIALS SECTION --- */
+#testimonials {
+    background-color: #fff;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #4A90E2;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.testimonial-card h4 {
+    color: #222;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE DESIGN (MOBILE) --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
